@@ -1,0 +1,32 @@
+.external {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.external h1 {
+  color: green;
+  text-decoration: underline 1px;
+  text-underline-offset: 0.5rem;
+}
+.external section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.external section article {
+  text-align: center;
+  padding: 4.5rem;
+  border: 1px solid green;
+  width: 100%;
+}
+.external section article:nth-child(even) {
+  color: red;
+}
+.external section article:nth-child(odd) {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
