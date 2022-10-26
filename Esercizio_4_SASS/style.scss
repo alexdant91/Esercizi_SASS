@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+@use "declaredVariables.scss";
+@use "function.scss";
+
+@mixin properties($color, $border-color, $font-size) {
+  color: $color;
+  border-color: $border-color;
+  font-size: function.rem($font-size);
+}
+
+.external {
+  border: 1px solid declaredVariables.$color-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+
+  h1 {
+    color: declaredVariables.$color-tertiary;
+    text-decoration: underline 1px;
+    text-underline-offset: 0.5rem;
+  }
+  & h2 {
+    @extend h1;
+    padding: 1rem;
+    border: 1px solid declaredVariables.$color-primary;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    article {
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px solid;
+      @include properties(
+        declaredVariables.$color-secondary,
+        declaredVariables.$color-tertiary,
+        16
+      );
+      width: 100%;
+    }
+    article:nth-child(even) {
+      color: declaredVariables.$color-primary;
+    }
+
+    article:nth-child(odd) {
+      color: declaredVariables.$color-secondary;
+    }
+  }
+
+  .footer {
+    width: 100%;
+
+    .internal {
+      @include properties(
+        declaredVariables.$color-tertiary,
+        declaredVariables.$color-secondary,
+        24
+      );
+      padding: 2rem;
+    }
+  }
+}
