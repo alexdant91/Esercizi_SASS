@@ -1,0 +1,52 @@
+.external {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.external h1 {
+  color: green;
+  text-decoration: underline 1px;
+  text-underline-offset: 0.5rem;
+}
+
+.external section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.external section article {
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid;
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.external section article:nth-child(even) {
+  color: red;
+}
+
+.external section article:nth-child(odd) {
+  color: blue;
+}
+
+.external .footer {
+  width: 100%;
+}
+
+.external .footer .internal {
+  color: green;
+  border-color: blue;
+  font-size: 24px;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
