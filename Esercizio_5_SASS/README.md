@@ -7,11 +7,11 @@ The added colors are black and white only
 
 
 **Suggerimento (da inserire a parte e quindi da rimuovere dal readme)**
+```scss
 @for $var from 1 to 20 {
-...
-@if $var == 10 {
-...
-
-
+    /* ... */
+    @if $var == 10 {
+        /* ... */
     }
 }
+```
